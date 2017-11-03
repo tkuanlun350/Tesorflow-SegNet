@@ -89,8 +89,8 @@ def writeImage(image, filename):
     Sky = [128,128,128]
     Building = [128,0,0]
     Pole = [192,192,128]
-    Road_marking = [255,69,0]
-    Road = [128,64,128]
+    Road_marking = [128,64,128]
+    Road = [255,69,0]
     Pavement = [60,40,222]
     Tree = [128,128,0]
     SignSymbol = [192,128,128]
@@ -102,8 +102,8 @@ def writeImage(image, filename):
     r = image.copy()
     g = image.copy()
     b = image.copy()
-    label_colours = np.array([Sky, Building, Pole, Road_marking, Road, Pavement, Tree, SignSymbol, Fence, Car, Pedestrian, Bicyclist, Unlabelled])
-    for l in range(0,12):
+    label_colours = np.array([Sky, Building, Pole, Road, Pavement, Tree, SignSymbol, Fence, Car, Pedestrian, Bicyclist, Unlabelled])
+    for l in range(0,11):
         r[image==l] = label_colours[l,0]
         g[image==l] = label_colours[l,1]
         b[image==l] = label_colours[l,2]
